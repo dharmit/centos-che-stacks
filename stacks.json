@@ -1,0 +1,225 @@
+{
+  "centos-go": {
+    "id": "centos-go",
+    "name": "CentOS Go",
+    "description": "CentOS Go Stack with Go 1.6.3",
+    "scope": "general",
+    "creator": "ide",
+    "tags": [
+      "CentOS",
+      "Go"
+    ],
+    "workspaceConfig": {
+      "name": "default",
+      "defaultEnv": "default",
+      "commands": [
+        {
+          "name": "run",
+          "commandLine": "cd ${current.project.path} \u0026\u0026 go get -d \u0026\u0026 go run main.go",
+          "type": "custom",
+          "attributes": {
+            "previewUrl": "http://${server.port.8080}"
+          }
+        }
+      ],
+      "projects": [],
+      "environments": [
+        {
+          "name": "default",
+          "machineConfigs": [
+            {
+              "dev": true,
+              "name": "default",
+              "type": "docker",
+              "source": {
+                "type": "dockerfile",
+                "location": "stub"
+              },
+              "limits": {
+                "memory": 0
+              },
+              "servers": [],
+              "envVariables": {}
+            }
+          ]
+        }
+      ]
+    },
+    "source": {
+      "type": "image",
+      "origin": "registry.centos.org/dharmit/centos_go"
+    },
+    "components": [
+      {
+        "name": "CentOS",
+        "version": "7.2"
+      },
+      {
+        "name": "Go",
+        "version": "1.6.2"
+      }
+    ],
+    "stackIcon": {
+      "name": "type-go.svg",
+      "mediaType": "image/svg+xml"
+    },
+    "acl": [
+      {
+        "user": "*",
+        "actions": [
+          "search"
+        ]
+      }
+    ]
+  },
+  "centos-python27": {
+    "id": "centos-python27",
+    "name": "CentOS Python 2.7",
+    "description": "CentOS Python Stack with Python 2.7.5, pip 8.1.2.",
+    "scope": "advanced",
+    "creator": "ide",
+    "tags": [
+      "Python 2.7",
+      "pip",
+      "CentOS",
+      "Git"
+    ],
+    "workspaceConfig": {
+      "name": "default",
+      "defaultEnv": "default",
+      "commands": [
+        {
+          "name": "run",
+          "commandLine": "cd ${current.project.path} \u0026\u0026 sudo virtualenv /env \u0026\u0026 sudo pip install -r requirements.txt \u0026\u0026 python main.py",
+          "type": "custom",
+          "attributes": {
+            "previewUrl": "http://${server.port.8080}"
+          }
+        }
+      ],
+      "projects": [],
+      "environments": [
+        {
+          "name": "default",
+          "machineConfigs": [
+            {
+              "dev": true,
+              "name": "default",
+              "type": "docker",
+              "source": {
+                "type": "dockerfile",
+                "location": "stub"
+              },
+              "limits": {
+                "memory": 0
+              },
+              "servers": [],
+              "envVariables": {}
+            }
+          ]
+        }
+      ]
+    },
+    "source": {
+      "type": "image",
+      "origin": "registry.centos.org/dharmit/centos_python27"
+    },
+    "components": [
+      {
+        "name": "Python",
+        "version": "2.7.5"
+      },
+      {
+        "name": "pip",
+        "version": "8.1.2"
+      }
+    ],
+    "stackIcon": {
+      "name": "type-python.svg",
+      "mediaType": "image/svg+xml"
+    },
+    "acl": [
+      {
+        "user": "*",
+        "actions": [
+          "search"
+        ]
+      }
+    ]
+  },
+  "centos-python34": {
+    "id": "centos-python34",
+    "name": "CentOS Python 3.4.5",
+    "description": "CentOS Python Stack with Python 3.4.5, pip 8.1.2.",
+    "scope": "advanced",
+    "creator": "ide",
+    "tags": [
+      "Python 3.4.5",
+      "pip",
+      "CentOS",
+      "Git"
+    ],
+    "workspaceConfig": {
+      "name": "default",
+      "defaultEnv": "default",
+      "commands": [
+        {
+          "name": "run",
+          "commandLine": "cd ${current.project.path} \u0026\u0026 sudo virtualenv /env \u0026\u0026 sudo pip3 install -r requirements.txt \u0026\u0026 python3 main.py",
+          "type": "custom",
+          "attributes": {
+            "previewUrl": "http://${server.port.8080}"
+          }
+        }
+      ],
+      "projects": [],
+      "environments": [
+        {
+          "name": "default",
+          "machineConfigs": [
+            {
+              "dev": true,
+              "name": "default",
+              "type": "docker",
+              "source": {
+                "type": "dockerfile",
+                "location": "stub"
+              },
+              "limits": {
+                "memory": 0
+              },
+              "servers": [],
+              "envVariables": {}
+            }
+          ]
+        }
+      ]
+    },
+    "source": {
+      "type": "image",
+      "origin": "registry.centos.org/dharmit/centos_python34"
+    },
+    "components": [
+      {
+        "name": "Python",
+        "version": "3.4.5"
+      },
+      {
+        "name": "pip",
+        "version": "8.1.2"
+      }
+    ],
+    "stackIcon": {
+      "name": "type-python.svg",
+      "mediaType": "image/svg+xml"
+    },
+    "acl": [
+      {
+        "user": "*",
+        "actions": [
+          "search"
+        ]
+      }
+    ]
+  }
+  }
