@@ -47,7 +47,7 @@
     },
     "source": {
       "type": "image",
-      "origin": "registry.centos.org/codenvy/centos_go"
+      "origin": "registry.centos.org/eclipse/centos_go"
     },
     "components": [
       {
@@ -122,7 +122,7 @@
     },
     "source": {
       "type": "image",
-      "origin": "registry.centos.org/codenvy/centos_python27"
+      "origin": "registry.centos.org/eclipse/centos_python27"
     },
     "components": [
       {
@@ -147,14 +147,14 @@
       }
     ]
   },
-  "centos-python34": {
-    "id": "centos-python34",
-    "name": "CentOS Python 3.4.5",
-    "description": "CentOS Python Stack with Python 3.4.5, pip 8.1.2.",
+  "centos-python35": {
+    "id": "centos-python35",
+    "name": "CentOS Python 3.5",
+    "description": "CentOS Python Stack with Python 3.5, pip 8.1.2.",
     "scope": "advanced",
     "creator": "ide",
     "tags": [
-      "Python 3.4.5",
+      "Python 3.5",
       "pip",
       "CentOS",
       "Git"
@@ -165,7 +165,7 @@
       "commands": [
         {
           "name": "run",
-          "commandLine": "cd ${current.project.path} \u0026\u0026 sudo virtualenv /env \u0026\u0026 sudo pip3 install -r requirements.txt \u0026\u0026 python3 main.py",
+          "commandLine": "source /opt/rh/rh-python35/enable \u0026\u0026 cd ${current.project.path} \u0026\u0026 sudo virtualenv /env \u0026\u0026 sudo pip3 install -r requirements.txt \u0026\u0026 python3 main.py",
           "type": "custom",
           "attributes": {
             "previewUrl": "http://${server.port.8080}"
@@ -197,7 +197,7 @@
     },
     "source": {
       "type": "image",
-      "origin": "registry.centos.org/codenvy/centos_python34"
+      "origin": "registry.centos.org/eclipse/centos_python35"
     },
     "components": [
       {
