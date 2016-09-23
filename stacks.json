@@ -47,7 +47,7 @@
     },
     "source": {
       "type": "image",
-      "origin": "registry.centos.org/eclipse/centos_go"
+      "origin": "registry.centos.org/eclipse/centos-go"
     },
     "components": [
       {
@@ -122,7 +122,7 @@
     },
     "source": {
       "type": "image",
-      "origin": "registry.centos.org/eclipse/centos_python27"
+      "origin": "registry.centos.org/eclipse/centos-python27"
     },
     "components": [
       {
@@ -197,7 +197,7 @@
     },
     "source": {
       "type": "image",
-      "origin": "registry.centos.org/eclipse/centos_python35"
+      "origin": "registry.centos.org/eclipse/centos-python35"
     },
     "components": [
       {
