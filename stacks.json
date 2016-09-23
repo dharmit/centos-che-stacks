@@ -150,7 +150,7 @@
   "centos-python35": {
     "id": "centos-python35",
     "name": "CentOS Python 3.5",
-    "description": "CentOS Python Stack with Python 3.5, pip 8.1.2.",
+    "description": "CentOS Python Stack with Python 3.5, pip 8.1.",
     "scope": "advanced",
     "creator": "ide",
     "tags": [
@@ -165,7 +165,7 @@
       "commands": [
         {
           "name": "run",
-          "commandLine": "source /opt/rh/rh-python35/enable \u0026\u0026 cd ${current.project.path} \u0026\u0026 sudo virtualenv /env \u0026\u0026 sudo pip3 install -r requirements.txt \u0026\u0026 python3 main.py",
+          "commandLine": "cd ${current.project.path} \u0026\u0026 sudo scl enable rh-python35 'virtualenv /env' \u0026\u0026 sudo scl enable rh-python35 'pip3 install -r requirements.txt' \u0026\u0026 scl enable rh-python35 'python3 main.py'",
           "type": "custom",
           "attributes": {
             "previewUrl": "http://${server.port.8080}"
@@ -202,11 +202,11 @@
     "components": [
       {
         "name": "Python",
-        "version": "3.4.5"
+        "version": "3.5"
       },
       {
         "name": "pip",
-        "version": "8.1.2"
+        "version": "8.1"
       }
     ],
     "stackIcon": {
