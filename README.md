@@ -16,13 +16,13 @@ the `stacks.json` file to it.
 - Start Eclipse Che with the help of eclipse/che Docker image:
 
     ```
-    $ docker run --rm -t -v /var/run/docker.sock:/var/run/docker.sock eclipse/che start
+    $ docker run --rm -t -v /var/run/docker.sock:/var/run/docker.sock registry.centos.org/eclipse/che-launcher start
     ```
 
 - Above command would create a new user called `user` and place Che related
   files under /home/user/che directory.
 
-- If you don't see files there, try restarting or stopping the eclipse/che
+- If you don't see files there, try restarting or stopping the che-server
   container.
 
 - `stacks.json` can be found under `/home/user/che/storage/stacks.json`.
@@ -37,7 +37,7 @@ the `stacks.json` file to it.
            -v /home/user/che/lib:/home/user/che/lib-copy \
            -v /home/user/che/workspaces:/home/user/che/workspaces \
            -v /home/user/che/storage:/home/user/che/storage \
-           codenvy/che-server
+           registry.centos.org/eclipse/che-server
     ```
 
 - Hit [http://localhost:8080](http://localhost:8080) in your browser and you
